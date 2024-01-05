@@ -1,0 +1,24 @@
+<h1>htmx sample</h1>
+
+<form
+  hx-post="/api/debug?page=2"
+  hx-target="#result"
+  hx-indicator="#loading"
+  hx-ext="json-enc"
+>
+  <input type="text" name="name" value="Michael" />
+  <button type="submit">Load page</button>
+</form>
+
+<p id="result">Placeholder text</p>
+
+<p
+  id="loading"
+  class="htmx-indicator"
+  style="background-color: #000; text-align: center"
+>
+  <img
+    src="https://cdn.jsdelivr.net/gh/SamHerbert/SVG-Loaders@v1.0.2/svg-loaders/rings.svg"
+    alt="loading..."
+  />
+</p>
